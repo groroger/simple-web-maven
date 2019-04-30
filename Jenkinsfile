@@ -7,15 +7,15 @@ pipeline {
 				echo "Testing en cours..."
 			}
 		}
-	}
-	stage('Build') {
-		steps {
-			echo "Building en cours..."
+		stage('Build') {
+			steps {
+				echo "Building en cours..."
+			}
 		}
-	}
-	stage ('Deploy') {
-		steps {
-			echo "Code deployed! We'll done bro'!"
+		stage ('Deploy') {
+			steps {
+				echo "Code deployed! We'll done bro'!"
+			}
 		}
 	}
 }
