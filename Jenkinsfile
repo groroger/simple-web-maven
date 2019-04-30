@@ -26,19 +26,21 @@ pipeline {
 			    timeout(time:5, unit:'DAYS') {
 			    	input message:'Approve PRODUCTION Deployement?'
 			    }
+			    
 				build job: 'deploy-to-prod'
+				
 			}
 
-		}
-		post {
+			post {
 			    success {
 			        echo 'Code deployed to Production'
 			    }
+			    
 			    failure {
-    			    echo 'Caca bouda! Recommence...'
-    			}
-
+				    echo 'Caca bouda! Recommence...'
+				}
+	
 			}
-
+		}
 	}
 }
