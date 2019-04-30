@@ -4,8 +4,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				echo "Building en cours..."
-				bat 'mvn cleanpackage'
+				bat 'mvn clean package'
 			}
 			post {
 			    success {
